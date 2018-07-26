@@ -24,7 +24,9 @@ public class intersectArray {
         HashMap<Integer, Integer> map1 = new HashMap<Integer, Integer>();
         HashMap<Integer, Integer> map2 = new HashMap<Integer, Integer>();
         HashMap<Integer, Integer> intersectMap = new HashMap<Integer, Integer>();
+
         Integer count = 1;
+
         for (int i = 0; i < nums1.length; i++) {
             if (map1.containsKey(nums1[i])) { // if has
                 count = map1.get(Integer.valueOf(nums1[i])) + 1;
@@ -57,6 +59,7 @@ public class intersectArray {
          */
 
         // put keyset into different arrays, sort and compare
+        // dont have to sort yet.
         ArrayList<Integer> list1 = new ArrayList<>();
         ArrayList<Integer> list2 = new ArrayList<>();
 
