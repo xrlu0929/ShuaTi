@@ -37,6 +37,10 @@ public class maxString {
                 // go and see next character -> compare with this first one
 
                 // go and see the next string of the same length -> compare
+                int init = 0;
+
+                
+
             }
 
 
