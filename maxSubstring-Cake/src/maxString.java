@@ -43,7 +43,8 @@ public class maxString {
 //                System.out.println(temp);
                 //System.out.println(checkLoop(temp, inputArray));
                 resultSet.add(checkLoop(temp, inputArray));
-//                System.out.println(resultSet);
+
+                System.out.println(resultSet);
             }
 
             // find the largest one in resultSet
