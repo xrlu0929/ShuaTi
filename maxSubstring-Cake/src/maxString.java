@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 
 public class maxString {
     public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class maxString {
 
         String b = "abcabcabcabc";
         System.out.println("Expected 4");
-        System.out.println(maxSubstring(b));
+        System.out.println("Result: " + maxSubstring(b));
     }
 
     public static int maxSubstring(String input) {
@@ -27,7 +27,7 @@ public class maxString {
             ArrayList<Character> temp = new ArrayList<>();
 
             if (length % i == 0) {
-                System.out.println(i);
+                //System.out.println(i);
                 subLength = length / i;
                 //System.out.println(subLength);
 
@@ -39,32 +39,36 @@ public class maxString {
                 // go and see next character -> compare with this first one
 
                 // go and see the next string of the same length -> compare
-                System.out.println("----");
-                System.out.println(temp);
+//                System.out.println("----");
+//                System.out.println(temp);
                 //System.out.println(checkLoop(temp, inputArray));
                 resultSet.add(checkLoop(temp, inputArray));
-                System.out.println(resultSet);
+//                System.out.println(resultSet);
             }
+
+            // find the largest one in resultSet
 
 
         }
 
-        return 1;
+        Collections.sort(resultSet);
+        Collections.reverse(resultSet);
+
+        return resultSet.get(0);
     }
 
     private static int checkLoop (ArrayList<Character> temp, char[] master) {
         int loop = 1;
         boolean endloop = false;
-        while (loop < ( master.length+1 )/ temp.size()  && !endloop) {
+        while (loop < master.length / temp.size()  && !endloop) {
             for (int i = 0; i < temp.size() ; i++) {
-                if (!temp.get(i).equals(master[(i + temp.size()) * loop])) {
+                if (!temp.get(i).equals(master[i + (temp.size() * loop)])) {
                     endloop = true;
-
                 }
             }
             loop++;
-            System.out.println("loop = " + loop);
-            System.out.println("end of for loop");
+//            System.out.println("loop = " + loop);
+//            System.out.println("end of for loop");
         }
 
         return loop;
