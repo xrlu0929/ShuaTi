@@ -81,9 +81,9 @@ public class minWindow {
                 char sc = source.charAt(left);
                 while (!map.containsKey(sc) || map.get(sc) > t.get(sc)) {
                     if (map.containsKey(sc) && map.get(sc) > t.get(sc)) {
-                        map.put(sc, map.get(sc) - 1); //吐掉
+                        map.put(sc, map.get(sc) - 1); //吐掉 扣除重复的
                     }
-                    left++;
+                    left++; // 如果map里没有 跳过
                     sc = source.charAt(left);
                 }
 
