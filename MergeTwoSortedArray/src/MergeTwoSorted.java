@@ -28,6 +28,7 @@ public class MergeTwoSorted {
     public static int[] merge (int[] one, int[] two) {
         int size1 = one.length;
         int size2 = two.length;
+
         int[] result = new int[size1 + size2];
         int i = 0;
         int j = 0;
@@ -58,4 +59,8 @@ public class MergeTwoSorted {
     }
     // Time O(m + n)
     // Space O(m + n)
+
+    public static int[] merge_recur() {
+        return new int[]{1, 1};
+    }
 }
