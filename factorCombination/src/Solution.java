@@ -20,6 +20,7 @@ public class Solution {
         if (product == n) {
             // hard point 1
             ArrayList<Integer> t = new ArrayList<Integer>(list);
+            // if don't copy, add would be empty
 
             result.add(t);
             return;
@@ -36,6 +37,7 @@ public class Solution {
                 factor(i* product, i, n, list, result);
 
                 // hard point 2
+                // remove repetitive elements
                 list.remove(list.size() - 1);
             }
         }
