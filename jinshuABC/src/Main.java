@@ -1,4 +1,11 @@
-//
+/**
+ * There are A B C THREE types of Mental Materials Elements
+ * You want to create a super material with all three elements
+ * 1 piece of super material contains at lease 1 piece of A, 1 of B, and 1 of C
+ * Given current piece of materials containing elements,
+ * how many piece of super materials can you create?
+ */
+
 import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
