@@ -40,7 +40,7 @@ public class SinglyLinkedList {
         Node input = new Node(value, null);
         // if head is null -> insert directly
         if (head == null){
-            head.next = input;
+            head = input;
             input.next = null;
         } else {
             Node temp = head;
@@ -49,7 +49,9 @@ public class SinglyLinkedList {
                 // go to next until its own next is null
                 temp = temp.next;
             }
-            input.next = temp.next;
+            // when temp.next == null
+            //
+            // input.next = temp.next;
             temp.next = input;
         }
     }
@@ -79,9 +81,17 @@ public class SinglyLinkedList {
 
         int data[] = {1,2,5,3,1};
 
-        for(int i =0; i < data.length; i++){
+        for(int i = 0; i < data.length; i++){
             //link.insertToHead(data[i]);
             link.insertTail(data[i]);
+        }
+
+        // check if insert workds
+        Node reader = link.head;
+        for(int i = 0; i < data.length; i++){
+            //link.insertToHead(data[i])
+            System.out.println(reader.data);
+            reader = reader.next;
         }
     }
 
