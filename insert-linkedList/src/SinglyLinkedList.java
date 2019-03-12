@@ -50,7 +50,7 @@ public class SinglyLinkedList {
                 temp = temp.next;
             }
             // when temp.next == null
-            //
+            // perhaps without the following line, it still works
             // input.next = temp.next;
             temp.next = input;
         }
@@ -86,7 +86,7 @@ public class SinglyLinkedList {
             link.insertTail(data[i]);
         }
 
-        // check if insert workds
+        // check if insert works
         Node reader = link.head;
         for(int i = 0; i < data.length; i++){
             //link.insertToHead(data[i])
