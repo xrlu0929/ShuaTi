@@ -6,12 +6,13 @@ public class ValidBraces {
         System.out.println(isValid("{[}]"));
         System.out.println(isValid("[{}]"));
 
-        //the one not working if I use peek
+        //the one not working if I use peek();
         System.out.println(isValid("{[{]}}"));
     }
 
     public static boolean isValid(String s) {
         char arr[] = s.toCharArray();
+        // don't use real Set, because Set
         Stack<Character> set = new Stack();
         for (Character ch : arr) {
             if (ch == '{' || ch == '[' || ch == '(') {
