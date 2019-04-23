@@ -26,6 +26,7 @@ public class Solution {
         }
 
         // cannot reverse the sequence
+        // otherwise, prev.next cannot be replaced
         insert.next = prev.next;
         prev.next = insert;
         return head;
