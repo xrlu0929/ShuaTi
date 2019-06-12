@@ -61,7 +61,7 @@ public class swapVowels {
 //        vowList.add('U');
 //        if (vowList.contains(c)){return true;}
 //        return false;
-        
+
         char[] vowels = new char[]{'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
 
         int i = 0;
